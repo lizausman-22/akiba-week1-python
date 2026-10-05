@@ -1,25 +1,22 @@
-# Exam Result Report
-# Collects student info and scores, calculates average, and displays a result..
-
-# Ask for student information
-name = input("Enter student name: ")
-python_score = float(input("Enter Python score: "))
-english_score = float(input("Enter English score: "))
-math_score = float(input("Enter Mathematics score: "))
-
-# Calculate the average
-average = (python_score + english_score + math_score) / 3
-
-# Display the result report
 print("========================================")
-print("          STUDENT RESULT")
+print("                RECEIPT")
 print("========================================")
+
+customer_name = input("Customer name: ")
+product_name = input("Product name: ")
+price = float(input("Price: "))
+quantity = int(input("Quantity: "))
+
+total = price * quantity
+
 print()
-print(f"Student: {name}")
+print(f"Customer: {customer_name}")
 print()
-print(f"Python:       {python_score}")
-print(f"English:      {english_score}")
-print(f"Mathematics:  {math_score}")
+print("Product        Price       Qty")
 print("----------------------------------------")
-print(f"Average:      {average}")
+print(f"{product_name:<15} {price:>7.0f} ETB    {quantity}")
+print()
+print(f"Total:         {total:,.0f} ETB")
+print()
+print("Thank you for shopping!")
 print("========================================")
